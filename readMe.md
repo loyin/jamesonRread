@@ -3,21 +3,21 @@
 ![扫描二维码下载app](http://demo.jameson512.com/xifeng/adv1.png)
 
 #预览图
-` <img src="http://demo.jameson512.com/xifeng/1.png" width="400px" />`
+<img src="http://demo.jameson512.com/xifeng/1.png" width="400px" />
 ----------
-` <img src="http://demo.jameson512.com/xifeng/2.png" width="400px" />`
+<img src="http://demo.jameson512.com/xifeng/2.png" width="400px" />
 --------------
-` <img src="http://demo.jameson512.com/xifeng/3.png" width="400px" />`
+<img src="http://demo.jameson512.com/xifeng/3.png" width="400px" />
 ---------------
-` <img src="http://demo.jameson512.com/xifeng/3-2.png" width="400px" />`
+<img src="http://demo.jameson512.com/xifeng/3-2.png" width="400px" />
 ----------------
-` <img src="http://demo.jameson512.com/xifeng/4.png" width="400px" />`
+<img src="http://demo.jameson512.com/xifeng/4.png" width="400px" />
 -----------------
-` <img src="http://demo.jameson512.com/xifeng/5.png" width="400px" />`
+<img src="http://demo.jameson512.com/xifeng/5.png" width="400px" />
 ------------------
-` <img src="http://demo.jameson512.com/xifeng/6.png" width="400px" />`
+<img src="http://demo.jameson512.com/xifeng/6.png" width="400px" />
 ---------------
-` <img src="http://demo.jameson512.com/xifeng/7.png" width="400px" />`
+<img src="http://demo.jameson512.com/xifeng/7.png" width="400px" />
 
 #使用方法
 
