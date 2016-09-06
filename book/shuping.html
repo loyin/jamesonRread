@@ -342,7 +342,7 @@ function postshuping () {
         return;
     }
     api.ajax({
-        url: indexSetting.url+'api.php?appkey='+indexSetting.appkey+'&type=get&module=postshuping&param=book_id-+-+'+indexSetting.book_id+',bbsuid-+-+'+indexSetting.userinfo.bbsuid+',text-+-+'+text,
+        url: indexSetting.url+'api.php?appkey='+indexSetting.appkey+'&type=get&module=postshuping&param=book_id----'+indexSetting.book_id+',bbsuid----'+indexSetting.userinfo.bbsuid+',text----'+text,
             method: 'post'
         }, function(ret, err) {
             if(ret.status){
@@ -375,7 +375,7 @@ function postshuping () {
 	//  初始化 
     function initload(){
     	api.ajax({
-		    url: indexSetting.url+'api.php?appkey='+indexSetting.appkey+'&type=get&module=shuping&param=book_id-+-+'+indexSetting.book_id+',current-+-+'+indexSetting.current,
+		    url: indexSetting.url+'api.php?appkey='+indexSetting.appkey+'&type=get&module=shuping&param=book_id----'+indexSetting.book_id+',current----'+indexSetting.current,
 		    method: 'get'
 		}, function(ret, err) {
 		    if (ret) {

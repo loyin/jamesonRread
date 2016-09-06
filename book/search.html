@@ -123,7 +123,7 @@
     };
     function searchaction(){
         api.ajax({
-            url: indexSetting.url+'api.php?appkey='+indexSetting.appkey+'&type=get&module=search&param=current-+-+'+indexSetting.current+',text-+-+'+indexSetting.text,
+            url: indexSetting.url+'api.php?appkey='+indexSetting.appkey+'&type=get&module=search&param=current----'+indexSetting.current+',text----'+indexSetting.text,
             method: 'get'
         }, function(ret, err) {
             if(ret){

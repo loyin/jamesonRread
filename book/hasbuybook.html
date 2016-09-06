@@ -113,7 +113,7 @@ apiready = function () {
     function initload(){
         if(indexSetting.userinfo.bbsuid){
     	api.ajax({
-		    url: indexSetting.url+'api.php?appkey='+indexSetting.appkey+'&type=get&module=hasbuy&param=buytype-+-+book,bbsuid-+-+'+indexSetting.userinfo.bbsuid,
+		    url: indexSetting.url+'api.php?appkey='+indexSetting.appkey+'&type=get&module=hasbuy&param=buytype----book,bbsuid----'+indexSetting.userinfo.bbsuid,
 		    method: 'get'
 		}, function(ret, err) {
 		    if (ret) {

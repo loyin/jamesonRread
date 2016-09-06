@@ -171,7 +171,7 @@ function togglesp(type){
 //  初始化 
     function initload(){
     	api.ajax({
-		    url: indexSetting.url+'api.php?appkey='+indexSetting.appkey+'&type=get&module=spgc&param=sptype-+-+'+indexSetting.sptype+',current-+-+'+indexSetting.current,
+		    url: indexSetting.url+'api.php?appkey='+indexSetting.appkey+'&type=get&module=spgc&param=sptype----'+indexSetting.sptype+',current----'+indexSetting.current,
 		    method: 'get'
 		}, function(ret, err) {
 		    if (ret) {

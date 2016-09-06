@@ -389,7 +389,7 @@ function initload(){
 	indexSetting.history = $api.getStorage('history');
     if(indexSetting.userinfo && indexSetting.userinfo.bbsuid){
         api.ajax({
-            url: indexSetting.url+'api.php?appkey='+indexSetting.appkey+'&type=get&module=store&param=bbsuid-+-+'+indexSetting.userinfo.bbsuid,
+            url: indexSetting.url+'api.php?appkey='+indexSetting.appkey+'&type=get&module=store&param=bbsuid----'+indexSetting.userinfo.bbsuid,
             method: 'get'
         }, function(ret, err) {
             if (ret) {
@@ -507,7 +507,7 @@ function openhistoryread(book_id,colums,colum_id,zhangjie,subject,book_name,imag
     //下载
 function down(book_id,colum_id){
     api.download({
-        url: indexSetting.url+'api.php?appkey='+indexSetting.appkey+'&type=get&module=downbook&param=book_id-+-+'+book_id+',colum_id-+-+'+colum_id,
+        url: indexSetting.url+'api.php?appkey='+indexSetting.appkey+'&type=get&module=downbook&param=book_id----'+book_id+',colum_id----'+colum_id,
         savePath: 'fs://'+book_id+'_'+colum_id+'.txt',
         report: true,
         cache: true,

@@ -59,7 +59,7 @@
 	
 	function initload(){
 		api.ajax({
-		    url: indexSetting.url+'api.php?appkey='+indexSetting.appkey+'&type=get&module=updateversion&param=version-+-+'+indexSetting.oldversion,
+		    url: indexSetting.url+'api.php?appkey='+indexSetting.appkey+'&type=get&module=updateversion&param=version----'+indexSetting.oldversion,
 		    method: 'get'
 		}, function(ret, err) {
 		    if (ret.status) {

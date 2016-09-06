@@ -142,7 +142,7 @@ apiready = function () {
 //  初始化 
     function initload(){
     	api.ajax({
-		    url: indexSetting.url+'api.php?appkey='+indexSetting.appkey+'&type=get&module=category&param=current-+-+'+indexSetting.current+',category_id-+-+'+indexSetting.category_id,
+		    url: indexSetting.url+'api.php?appkey='+indexSetting.appkey+'&type=get&module=category&param=current----'+indexSetting.current+',category_id----'+indexSetting.category_id,
 		    method: 'get'
 		}, function(ret, err) {
 		    if (ret) {

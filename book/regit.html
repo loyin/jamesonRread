@@ -143,7 +143,7 @@ apiready = function(){
         }
     }, function(ret) {});
               api.ajax({
-                url: indexSetting.url+'api.php?appkey='+indexSetting.appkey+'&type=get&module=login&param=username-+-+'+(username)+',pass-+-+'+('uslzkw'+password+'aqlcje'),
+                url: indexSetting.url+'api.php?appkey='+indexSetting.appkey+'&type=get&module=login&param=username----'+(username)+',pass----'+('uslzkw'+password+'aqlcje'),
                   method: 'get'
               }, function(ret2, err2) {
                 indexSetting.activity.closeKeyFrame();
@@ -209,7 +209,7 @@ apiready = function(){
         }
     }, function(ret) {});
               api.ajax({
-                url: indexSetting.url+'api.php?appkey='+indexSetting.appkey+'&type=get&module=reg&param=username-+-+'+(username)+',pass-+-+'+(password),
+                url: indexSetting.url+'api.php?appkey='+indexSetting.appkey+'&type=get&module=reg&param=username----'+(username)+',pass----'+(password),
                   method: 'get'
               }, function(ret2, err2) {
                 indexSetting.activity.closeKeyFrame();

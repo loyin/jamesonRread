@@ -227,7 +227,7 @@ apiready = function () {
             }
             $api.removeCls($api.byId('loading'),'aui-hide');
             api.ajax({
-		    	url: indexSetting.url+'api.php?appkey='+indexSetting.appkey+'&type=get&module=jingxuan&param=current-+-+'+indexSetting.current,
+		    	url: indexSetting.url+'api.php?appkey='+indexSetting.appkey+'&type=get&module=jingxuan&param=current----'+indexSetting.current,
 		    	method: 'get'
 			}, function(ret, err) {
 				if(ret){

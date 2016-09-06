@@ -140,7 +140,7 @@ apiready = function () {
 //  初始化 
     function initload(){
     	api.ajax({
-		    url: indexSetting.url+'api.php?appkey='+indexSetting.appkey+'&type=get&module=authornewbook&param=authorid-+-+'+indexSetting.authorid,
+		    url: indexSetting.url+'api.php?appkey='+indexSetting.appkey+'&type=get&module=authornewbook&param=authorid----'+indexSetting.authorid,
 		    method: 'get'
 		}, function(ret, err) {
 		    if (ret) {

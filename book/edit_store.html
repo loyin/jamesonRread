@@ -84,7 +84,7 @@
 function initload(){
     if(userinfo.bbsuid){
         api.ajax({
-            url: indexSetting.url+'api.php?appkey='+indexSetting.appkey+'&type=get&module=store&param=bbsuid-+-+'+userinfo.bbsuid,
+            url: indexSetting.url+'api.php?appkey='+indexSetting.appkey+'&type=get&module=store&param=bbsuid----'+userinfo.bbsuid,
             method: 'get'
         }, function(ret, err) {
             if (ret) {
@@ -169,7 +169,7 @@ function initload(){
             if(userinfo.bbsuid){
                 var bookids = indexSetting.ids.join('##');
                     api.ajax({
-                        url: indexSetting.url+'api.php?appkey='+indexSetting.appkey+'&type=get&module=delstore&param=book_id-+-+'+bookids+',bbsuid-+-+'+userinfo.bbsuid,
+                        url: indexSetting.url+'api.php?appkey='+indexSetting.appkey+'&type=get&module=delstore&param=book_id----'+bookids+',bbsuid----'+userinfo.bbsuid,
                         method: 'get'
                     }, function(ret, err) {if (ret) {}});
             }

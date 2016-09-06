@@ -152,7 +152,7 @@ function togglezz(type){
 //  初始化 
     function initload(){
     	api.ajax({
-		    url: indexSetting.url+'api.php?appkey='+indexSetting.appkey+'&type=get&module=zzlist&param=zztype-+-+'+indexSetting.zztype+',current-+-+'+indexSetting.current,
+		    url: indexSetting.url+'api.php?appkey='+indexSetting.appkey+'&type=get&module=zzlist&param=zztype----'+indexSetting.zztype+',current----'+indexSetting.current,
 		    method: 'get'
 		}, function(ret, err) {
 		    if (ret) {

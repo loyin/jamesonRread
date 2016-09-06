@@ -721,7 +721,7 @@ function dianping(id,type){
     }
 function addzorf(id,type){
         api.ajax({
-            url: indexSetting.url+'api.php?appkey='+indexSetting.appkey+'&type=get&module=addzorf&param=dp_id-+-+'+id+',dptype-+-+'+type,
+            url: indexSetting.url+'api.php?appkey='+indexSetting.appkey+'&type=get&module=addzorf&param=dp_id----'+id+',dptype----'+type,
             method: 'get'
         }, function(ret, err) {
             if(ret.status){
@@ -828,7 +828,7 @@ function ajaxuser(){
 	var userinfo = $api.getStorage('userinfo');
 	if(userinfo.bbsuid && (userinfo.bbsuid>0))
     	api.ajax({
-            url: appinfo.url+'api.php?appkey='+appinfo.appkey+'&type=get&module=user&param=bbsuid-+-+'+userinfo.bbsuid,
+            url: appinfo.url+'api.php?appkey='+appinfo.appkey+'&type=get&module=user&param=bbsuid----'+userinfo.bbsuid,
             method: 'get'
         }, function(ret, err) {
             if (ret) {

@@ -439,7 +439,7 @@
     function initload(){
         indexSetting.userinfo = $api.getStorage('userinfo');
     	api.ajax({
-		    url: indexSetting.url+'api.php?appkey='+indexSetting.appkey+'&type=get&module=book&param=book_id-+-+'+indexSetting.book_id+',bbsuid-+-+'+indexSetting.userinfo.bbsuid,
+		    url: indexSetting.url+'api.php?appkey='+indexSetting.appkey+'&type=get&module=book&param=book_id----'+indexSetting.book_id+',bbsuid----'+indexSetting.userinfo.bbsuid,
 		    method: 'get'
 		}, function(ret, err) {
 		    if (ret) {
@@ -688,7 +688,7 @@ function addstore(book_id,uid){
         var userinfo = $api.getStorage('userinfo');
         if(userinfo.bbsuid && userinfo.bbsuid > 0){
             api.ajax({
-                url: indexSetting.url+'api.php?appkey='+indexSetting.appkey+'&type=get&module=addstore&param=book_id-+-+'+indexSetting.book_id+',bbsuid-+-+'+userinfo.bbsuid,
+                url: indexSetting.url+'api.php?appkey='+indexSetting.appkey+'&type=get&module=addstore&param=book_id----'+indexSetting.book_id+',bbsuid----'+userinfo.bbsuid,
                 method: 'get'
             }, function(ret, err) {if (ret) {}});
         }
@@ -715,7 +715,7 @@ function down(book_id,uid){
     }
     $api.html($api.byId('downbutton'),'<i class="fa fa-spinner fa-spin"></i>');
     api.download({
-        url: indexSetting.url+'api.php?appkey='+indexSetting.appkey+'&type=get&module=downbook&param=book_id-+-+'+book_id+',colum_id-+-+'+indexSetting.firstcolumid,
+        url: indexSetting.url+'api.php?appkey='+indexSetting.appkey+'&type=get&module=downbook&param=book_id----'+book_id+',colum_id----'+indexSetting.firstcolumid,
         savePath: 'fs://'+book_id+'_'+indexSetting.firstcolumid+'.txt',
         report: true,
         cache: true,
@@ -871,7 +871,7 @@ function langdu(book_id,colum_id,eventtype){
     indexSetting.strarray = new Array();
 	if(colum_id){
 		api.download({
-	        url: indexSetting.url+'api.php?appkey='+indexSetting.appkey+'&type=get&module=downbook&param=book_id-+-+'+book_id+',colum_id-+-+'+colum_id,
+	        url: indexSetting.url+'api.php?appkey='+indexSetting.appkey+'&type=get&module=downbook&param=book_id----'+book_id+',colum_id----'+colum_id,
 	        savePath: 'fs://'+book_id+'_'+colum_id+'.txt',
 	        report: true,
 	        cache: true,
@@ -900,7 +900,7 @@ function langdu(book_id,colum_id,eventtype){
 				    }else{
 					   	//下一个章节
 					   		api.ajax({
-									url: indexSetting.url+'api.php?appkey='+indexSetting.appkey+'&type=get&module=nextcolum&param=book_id-+-+'+book_id+',colum_id-+-+'+colum_id+',zhangjie-+-+'+indexSetting.zhangjie,
+									url: indexSetting.url+'api.php?appkey='+indexSetting.appkey+'&type=get&module=nextcolum&param=book_id----'+book_id+',colum_id----'+colum_id+',zhangjie----'+indexSetting.zhangjie,
 									method: 'get'
 								}, function(retnext, errnext) {
 								if(parseInt(retnext.data.colum_id) < 1){
@@ -944,7 +944,7 @@ function readstrinaudio(str,book_id,colum_id){
 					readstrinaudio(tmp.data);
 				}else{
 					api.ajax({
-						url: indexSetting.url+'api.php?appkey='+indexSetting.appkey+'&type=get&module=nextcolum&param=book_id-+-+'+book_id+',colum_id-+-+'+colum_id+',zhangjie-+-+'+indexSetting.zhangjie,
+						url: indexSetting.url+'api.php?appkey='+indexSetting.appkey+'&type=get&module=nextcolum&param=book_id----'+book_id+',colum_id----'+colum_id+',zhangjie----'+indexSetting.zhangjie,
 							method: 'get'
 						}, function(retnext, errnext) {
 						if(parseInt(retnext.data.colum_id) < 1){
@@ -1171,7 +1171,7 @@ function tixinggoumai (readtype) {
                     var book_id = thebook.book_id;
                     var colum_id = indexSetting.firstcolumid;
                     api.ajax({
-                        url: indexSetting.url+'api.php?appkey='+indexSetting.appkey+'&type=get&module=buytid&param=bbsuid-+-+'+bbsuid+',book_id-+-+'+book_id+',authorid-+-+'+authorid+',price-+-+'+price+',colum_id-+-+'+colum_id,
+                        url: indexSetting.url+'api.php?appkey='+indexSetting.appkey+'&type=get&module=buytid&param=bbsuid----'+bbsuid+',book_id----'+book_id+',authorid----'+authorid+',price----'+price+',colum_id----'+colum_id,
                         method: 'get'
                     }, function(ret2, err2) {
                         if(ret2.status){

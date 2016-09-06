@@ -174,7 +174,7 @@ apiready = function () {
 //  初始化 
     function initload(){
     	api.ajax({
-		    url: indexSetting.url+'api.php?appkey='+indexSetting.appkey+'&type=get&module=fensilist&param=current-+-+'+indexSetting.current+',authorid-+-+'+indexSetting.authorid,
+		    url: indexSetting.url+'api.php?appkey='+indexSetting.appkey+'&type=get&module=fensilist&param=current----'+indexSetting.current+',authorid----'+indexSetting.authorid,
 		    method: 'get'
 		}, function(ret, err) {
 		    if (ret) {

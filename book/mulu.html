@@ -116,7 +116,7 @@
     //  初始化 
     function initload(){
         api.ajax({
-            url: indexSetting.url+'api.php?appkey='+indexSetting.appkey+'&type=get&module=mulu&param=book_id-+-+'+indexSetting.book_id,
+            url: indexSetting.url+'api.php?appkey='+indexSetting.appkey+'&type=get&module=mulu&param=book_id----'+indexSetting.book_id,
             method: 'get'
         }, function(ret, err) {
             if (ret) {
@@ -147,7 +147,7 @@
     //下载
 function down(colum_id){
     api.download({
-        url: indexSetting.url+'api.php?appkey='+indexSetting.appkey+'&type=get&module=downbook&param=book_id-+-+'+indexSetting.book_id+',colum_id-+-+'+colum_id,
+        url: indexSetting.url+'api.php?appkey='+indexSetting.appkey+'&type=get&module=downbook&param=book_id----'+indexSetting.book_id+',colum_id----'+colum_id,
         savePath: 'fs://'+indexSetting.book_id+'_'+colum_id+'.txt',
         report: true,
         cache: true,
@@ -209,7 +209,7 @@ function openzhangjie(colum_id,zhangjie,subject,price){
             	}else{
             		//去判断本章节是否可以读，如果不可读，则去提示登录绑定和购买充值
 					 api.ajax({
-				    	url: indexSetting.url+'api.php?appkey='+indexSetting.appkey+'&type=get&module=isbuy&param=book_id-+-+'+indexSetting.book_id+',bbsuid-+-+'+userinfo.bbsuid+',colum_id-+-+'+colum_id,
+				    	url: indexSetting.url+'api.php?appkey='+indexSetting.appkey+'&type=get&module=isbuy&param=book_id----'+indexSetting.book_id+',bbsuid----'+userinfo.bbsuid+',colum_id----'+colum_id,
 				    	method: 'get'
 					}, function(ret, err) {
 						if(ret.status){
@@ -489,7 +489,7 @@ function tixinggoumai (readtype,colum_id,zhangjie,subject,price) {
                     var book_id = indexSetting.book_id;
                     var colum_id = params[0];
                     api.ajax({
-                        url: indexSetting.url+'api.php?appkey='+indexSetting.appkey+'&type=get&module=buytid&param=bbsuid-+-+'+bbsuid+',book_id-+-+'+book_id+',authorid-+-+'+authorid+',price-+-+'+price+',colum_id-+-+'+colum_id,
+                        url: indexSetting.url+'api.php?appkey='+indexSetting.appkey+'&type=get&module=buytid&param=bbsuid----'+bbsuid+',book_id----'+book_id+',authorid----'+authorid+',price----'+price+',colum_id----'+colum_id,
                         method: 'get'
                     }, function(ret2, err2) {
                         if(ret2.status){

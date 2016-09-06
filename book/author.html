@@ -139,7 +139,7 @@ function guanzhu(){
 //增加服务器数据库粉丝数量
 function changefensi(type){
 	api.ajax({
-        url: indexSetting.url+'api.php?appkey='+indexSetting.appkey+'&type=get&module=changefensi&param=uid-+-+'+indexSetting.authorid+',bbsuid-+-+'+indexSetting.userinfo.bbsuid+',type-+-+'+type,
+        url: indexSetting.url+'api.php?appkey='+indexSetting.appkey+'&type=get&module=changefensi&param=uid----'+indexSetting.authorid+',bbsuid----'+indexSetting.userinfo.bbsuid+',type----'+type,
         method: 'get'
     }, function(ret, err) {});
 }
@@ -157,7 +157,7 @@ function checkguanzhu(){
 }
 function initload(){
     api.ajax({
-        url: indexSetting.url+'api.php?appkey='+indexSetting.appkey+'&type=get&module=author&param=uid-+-+'+indexSetting.authorid,
+        url: indexSetting.url+'api.php?appkey='+indexSetting.appkey+'&type=get&module=author&param=uid----'+indexSetting.authorid,
         method: 'get'
     }, function(ret, err) {
         if (ret) {
@@ -271,7 +271,7 @@ function loadbooklist () {
   $api.removeCls($api.byId('loading'),'aui-hide');
   if(indexSetting.total>=indexSetting.current){
       api.ajax({
-        url: indexSetting.url+'api.php?appkey='+indexSetting.appkey+'&type=get&module=authorbooks&param=current-+-+'+indexSetting.current+',uid-+-+'+indexSetting.authorid,
+        url: indexSetting.url+'api.php?appkey='+indexSetting.appkey+'&type=get&module=authorbooks&param=current----'+indexSetting.current+',uid----'+indexSetting.authorid,
         method: 'get'
       }, function(ret, err) {
       if(ret){

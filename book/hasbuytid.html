@@ -96,7 +96,7 @@ apiready = function () {
 function initload(){
     if(indexSetting.userinfo.bbsuid){
     	api.ajax({
-		    url: indexSetting.url+'api.php?appkey='+indexSetting.appkey+'&type=get&module=hasbuytid&param=bbsuid-+-+'+indexSetting.userinfo.bbsuid,
+		    url: indexSetting.url+'api.php?appkey='+indexSetting.appkey+'&type=get&module=hasbuytid&param=bbsuid----'+indexSetting.userinfo.bbsuid,
 		    method: 'get'
 		}, function(ret, err) {
 		    if (ret) {
@@ -128,7 +128,7 @@ function initload(){
     //下载
 function down(book_id,colum_id){
     api.download({
-        url: indexSetting.url+'api.php?appkey='+indexSetting.appkey+'&type=get&module=downbook&param=book_id-+-+'+book_id+',colum_id-+-+'+colum_id,
+        url: indexSetting.url+'api.php?appkey='+indexSetting.appkey+'&type=get&module=downbook&param=book_id----'+book_id+',colum_id----'+colum_id,
         savePath: 'fs://'+book_id+'_'+colum_id+'.txt',
         report: true,
         cache: true,

@@ -167,7 +167,7 @@ apiready = function () {
         ajaxuser();
         indexSetting.userinfo = $api.getStorage('userinfo');
     	api.ajax({
-		    url: indexSetting.url+'api.php?appkey='+indexSetting.appkey+'&type=get&module=dashanglist&param=current-+-+'+indexSetting.current+',book_id-+-+'+indexSetting.book_id,
+		    url: indexSetting.url+'api.php?appkey='+indexSetting.appkey+'&type=get&module=dashanglist&param=current----'+indexSetting.current+',book_id----'+indexSetting.book_id,
 		    method: 'get'
 		}, function(ret, err) {
 		    if (ret) {
@@ -404,7 +404,7 @@ function dashang(book_id){
                     var authorid = indexSetting.authorid;
                     var dashangshuliang = ret.amount;
                     api.ajax({
-                        url: indexSetting.url+'api.php?appkey='+indexSetting.appkey+'&type=get&module=dashangaction&param=bbsuid-+-+'+bbsuid+',book_id-+-+'+book_id+',authorid-+-+'+authorid+',dashangshuliang-+-+'+dashangshuliang,
+                        url: indexSetting.url+'api.php?appkey='+indexSetting.appkey+'&type=get&module=dashangaction&param=bbsuid----'+bbsuid+',book_id----'+book_id+',authorid----'+authorid+',dashangshuliang----'+dashangshuliang,
                         method: 'get'
                     }, function(ret2, err2) {
                             if(ret2.status){

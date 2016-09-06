@@ -155,7 +155,7 @@ function fastreg (){
               }
     }, function(ret) {});
 	api.ajax({
-       url: indexSetting.url+'api.php?appkey='+indexSetting.appkey+'&type=get&module=fastreg&param=nickname-+-+'+indexSetting.userinfo.name+',openid-+-+'+indexSetting.userinfo.uid+',dqlogintype-+-+'+indexSetting.userinfo.dqlogintype,
+       url: indexSetting.url+'api.php?appkey='+indexSetting.appkey+'&type=get&module=fastreg&param=nickname----'+indexSetting.userinfo.name+',openid----'+indexSetting.userinfo.uid+',dqlogintype----'+indexSetting.userinfo.dqlogintype,
        method: 'get'
      }, function(ret2, err2) {
         if(ret2){
@@ -271,10 +271,10 @@ function gobind(){
           }, function(ret) {});
           var binddata = '';
           if(indexSetting.userinfo.uid){
-             binddata += 'openid-+-+'+indexSetting.userinfo.uid+',logintype-+-+'+indexSetting.userinfo.dqlogintype+',nickname-+-+'+(indexSetting.userinfo.name)+',';
+             binddata += 'openid----'+indexSetting.userinfo.uid+',logintype----'+indexSetting.userinfo.dqlogintype+',nickname----'+(indexSetting.userinfo.name)+',';
           }
           api.ajax({
-            url: indexSetting.url+'api.php?appkey='+indexSetting.appkey+'&type=get&module=login&param=loginaction-+-+bind,'+binddata+'username-+-+'+(ret.amount[0])+',pass-+-+'+('uslzkw'+ret.amount[1]+'aqlcje'),
+            url: indexSetting.url+'api.php?appkey='+indexSetting.appkey+'&type=get&module=login&param=loginaction----bind,'+binddata+'username----'+(ret.amount[0])+',pass----'+('uslzkw'+ret.amount[1]+'aqlcje'),
               method: 'get'
           }, function(ret2, err2) {
           if(ret2){
@@ -337,7 +337,7 @@ function initload(){
   $api.html($api.byId('loginstatus'),html);
   if(indexSetting.userinfo.bbsuid){
     api.ajax({
-        url: indexSetting.url+'api.php?appkey='+indexSetting.appkey+'&type=get&module=user&param=bbsuid-+-+'+indexSetting.userinfo.bbsuid,
+        url: indexSetting.url+'api.php?appkey='+indexSetting.appkey+'&type=get&module=user&param=bbsuid----'+indexSetting.userinfo.bbsuid,
         method: 'get'
     }, function(ret, err) {
         if (ret) {
@@ -466,7 +466,7 @@ function jiechubangding () {
   if(confirm('解除绑定后你无法阅读付费章节和打赏等功能?')){
       indexSetting.userinfo = $api.getStorage('userinfo');
       api.ajax({
-          url: indexSetting.url+'api.php?appkey='+indexSetting.appkey+'&type=get&module=unbind&param=bbsuid-+-+'+indexSetting.userinfo.bbsuid+',dqlogintype-+-+'+indexSetting.userinfo.dqlogintype+',openid-+-+'+indexSetting.userinfo.uid,
+          url: indexSetting.url+'api.php?appkey='+indexSetting.appkey+'&type=get&module=unbind&param=bbsuid----'+indexSetting.userinfo.bbsuid+',dqlogintype----'+indexSetting.userinfo.dqlogintype+',openid----'+indexSetting.userinfo.uid,
           method: 'get'
       }, function(ret, err) {
           if(ret.status){

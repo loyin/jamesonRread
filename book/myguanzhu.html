@@ -133,7 +133,7 @@ apiready = function () {
             local = indexSetting.guanzhuinfo.join('__');
         }
     	api.ajax({
-		    url: indexSetting.url+'api.php?appkey='+indexSetting.appkey+'&type=get&module=myguanzhu&param=current-+-+'+indexSetting.current+',uid-+-+'+indexSetting.userinfo.bbsuid+',local-+-+'+local,
+		    url: indexSetting.url+'api.php?appkey='+indexSetting.appkey+'&type=get&module=myguanzhu&param=current----'+indexSetting.current+',uid----'+indexSetting.userinfo.bbsuid+',local----'+local,
 		    method: 'get'
 		}, function(ret, err) {
 		    if (ret) {

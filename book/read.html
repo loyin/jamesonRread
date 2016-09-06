@@ -496,7 +496,7 @@ function openframe(name){
             }
         }, function(ret) {});
         api.ajax({
-            url: indexSetting.url+'api.php?appkey='+indexSetting.appkey+'&type=get&module=prevcolum&param=book_id-+-+'+indexSetting.book_id+',colum_id-+-+'+indexSetting.colum_id+',zhangjie-+-+'+indexSetting.zhangjie+',bbsuid-+-+'+userinfo.bbsuid,
+            url: indexSetting.url+'api.php?appkey='+indexSetting.appkey+'&type=get&module=prevcolum&param=book_id----'+indexSetting.book_id+',colum_id----'+indexSetting.colum_id+',zhangjie----'+indexSetting.zhangjie+',bbsuid----'+userinfo.bbsuid,
             method: 'get'
         }, function(ret, err) {
             if(parseInt(ret.data.colum_id) < 1){
@@ -532,7 +532,7 @@ function openframe(name){
             }
         }, function(ret) {});
         api.ajax({
-            url: indexSetting.url+'api.php?appkey='+indexSetting.appkey+'&type=get&module=nextcolum&param=book_id-+-+'+indexSetting.book_id+',colum_id-+-+'+indexSetting.colum_id+',zhangjie-+-+'+indexSetting.zhangjie+',bbsuid-+-+'+userinfo.bbsuid,
+            url: indexSetting.url+'api.php?appkey='+indexSetting.appkey+'&type=get&module=nextcolum&param=book_id----'+indexSetting.book_id+',colum_id----'+indexSetting.colum_id+',zhangjie----'+indexSetting.zhangjie+',bbsuid----'+userinfo.bbsuid,
             method: 'get'
         }, function(ret, err) {
             if(parseInt(ret.data.colum_id) < 1){
@@ -569,7 +569,7 @@ function openframe(name){
             }
         }
         api.download({
-            url: indexSetting.url+'api.php?appkey='+indexSetting.appkey+'&type=get&module=downbook&param=book_id-+-+'+book_id+',colum_id-+-+'+colum_id,
+            url: indexSetting.url+'api.php?appkey='+indexSetting.appkey+'&type=get&module=downbook&param=book_id----'+book_id+',colum_id----'+colum_id,
             savePath: 'fs://'+book_id+'_'+colum_id+'.txt',
             report: true,
             cache: true,
@@ -810,7 +810,7 @@ function tixinggoumai (readtype,book_id,colum_id,zhangjie,subject,price,kedu,aut
                     var book_id = params[0];
                     var colum_id = params[1];
                     api.ajax({
-                        url: indexSetting.url+'api.php?appkey='+indexSetting.appkey+'&type=get&module=buytid&param=bbsuid-+-+'+bbsuid+',book_id-+-+'+book_id+',authorid-+-+'+authorid+',price-+-+'+price+',colum_id-+-+'+colum_id,
+                        url: indexSetting.url+'api.php?appkey='+indexSetting.appkey+'&type=get&module=buytid&param=bbsuid----'+bbsuid+',book_id----'+book_id+',authorid----'+authorid+',price----'+price+',colum_id----'+colum_id,
                         method: 'get'
                     }, function(ret2, err2) {
                         if(ret2.status){

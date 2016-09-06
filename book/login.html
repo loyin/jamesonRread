@@ -145,7 +145,7 @@ indexSetting.guanzhuinfo = $api.getStorage('guanzhuinfo')?$api.getStorage('guanz
                       updateuserinfo.dqlogintype = 'qq';
                       // 判断是否绑定过帐号
                       api.ajax({
-                        url: indexSetting.url+'api.php?appkey='+indexSetting.appkey+'&type=get&module=withotherlogin&param=logintype-+-+qq,openid-+-+'+ret.openId,
+                        url: indexSetting.url+'api.php?appkey='+indexSetting.appkey+'&type=get&module=withotherlogin&param=logintype----qq,openid----'+ret.openId,
                           method: 'get'
                       }, function(retbind, errbind) {
                         if(retbind && retbind.status){
@@ -215,7 +215,7 @@ function hebingguanzhu(bbsuid){
 	if(indexSetting.guanzhuinfo.length && (bbsuid > 0)){
 		var local = indexSetting.guanzhuinfo.join('__');
 		api.ajax({
-		    url: indexSetting.url+'api.php?appkey='+indexSetting.appkey+'&type=get&module=hebingguanzhu&param=bbsuid-+-+'+bbsuid+',local-+-+'+local,
+		    url: indexSetting.url+'api.php?appkey='+indexSetting.appkey+'&type=get&module=hebingguanzhu&param=bbsuid----'+bbsuid+',local----'+local,
 		    method: 'get'
 		}, function(ret, err) {
 			if(ret.status){
